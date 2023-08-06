@@ -14,6 +14,8 @@ RUN git clone --filter=blob:none https://github.com/folke/lazy.nvim.git --branch
 # install lunarvim dependencies
 RUN apk add yarn python3 cargo bash --update
 
+# install ruby
+RUN apk add ruby-dev sqlite-dev ruby
 # install tree-sitter-cli with cargo because `npm i tree-sitter-cli` fails on
 # apple silicon. Install other rust dependencies while at it.
 RUN npm install tree-sitter-cli 
