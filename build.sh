@@ -1,2 +1,2 @@
 #!/usr/bin/env bash
-docker build -t lvim .
+docker build --force-rm=true -t lvim .
