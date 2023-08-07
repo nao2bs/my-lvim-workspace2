@@ -28,6 +28,8 @@ RUN apk add make gcc sqlite-dev
 RUN npm install tree-sitter-cli 
 # RUN cargo install fd-find ripgrep
 
+RUN gem install rails
+
 COPY .zshrc .zshrc
 COPY projects projects
 COPY nvim .config/nvim
