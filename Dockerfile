@@ -45,6 +45,6 @@ RUN su -c "bash <(curl -s https://raw.githubusercontent.com/lunarvim/lunarvim/ma
 
 FROM base
 SHELL ["/bin/zsh", "-c"]
-WORKDIR /root/projects/pets
+WORKDIR /root/projects
 COPY lvim /root/.config/lvim
 CMD ["/bin/zsh"]

@@ -1,0 +1,21 @@
+version: '3'
+
+services:
+  lvim:
+    image: lvim
+    build:
+      dockerfile: Dockerfile
+    command: bash -c "rm -f tmp/pids/server.pid && bundle exec rails s -p 3000 -b '0.0.0.0'"
+    ports:
+      - "3000:3000"
+    restart: always
+    tty: true
+    stdin_open: true
+    volumes:
+      - ./myapp:/myapp
+    networks:
+       - lvim
+networks:
+  lvim:
+    driver: bridge
+    external: true
